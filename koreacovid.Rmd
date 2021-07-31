@@ -61,13 +61,18 @@ barchartGC(~result + sex,data=kRdata)
 barchartGC(~result + sex,data=kRdata, type="percent")
 
 ```
-
-
-
-
+  
+The bar chart indicates that male deaths related to covid make up 60% of the total. Females make up the other 40% of deaths.
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+  
+The numerical results show out of 100, males make up 60% of covid related deaths, compared to females at 36%. This also shows males are teice as likely to die from covid compared o females.
 
 ## Inferential results 
 
